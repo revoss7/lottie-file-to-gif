@@ -158,6 +158,7 @@ function creatAnimator(path) {
         console.log("Frames:" + animator_frames + "\n");
 
         gif = new GIF({
+            transparent: 'rgba(0,0,0,0)',
             repeat: 0,
             workers: 2,
             quality: 1,
