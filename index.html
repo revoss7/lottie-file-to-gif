@@ -19,7 +19,6 @@
            
         <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
             <h3>Шаг1
-                <small>&nbsp;&nbsp;|&nbsp;&nbsp;</small>
             </h3>
             <div role="upload" id="fileUploader">
                 <input type="file" style="display: none" accept="application/json" id="inputFile"
@@ -47,7 +46,6 @@
         <!--动画下载-->
         <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
             <h3>Шаг2
-                <small>&nbsp;&nbsp;|&nbsp;&nbsp;GIF</small>
             </h3>
             <button type="button" id="exportBtn" class="btn btn-primary btn-block">Конвертировать в GIF</button>
         </div>
@@ -62,13 +60,13 @@
             <h4 class="modal-title">Выполняется конвертация</h4>
         </div>
         <div class="modal-body">
-            <p id="animatorNotInitErr">Ожидайте</p>
+            <p id="animatorNotInitErr">Ошибка</p>
             <p id="gifRenderIsWorking" style="display: none">Конвертирование в GIF займёт 1~2минуты</p>
             <img id="animator2GifResult" class="img-responsive" src="" style="display: none">
-            <a id="downloadGIF" type="button" href="" download="" class="btn btn-info btn-block" style="display: none;margin-top: 24px">下载图片</a>
+            <a id="downloadGIF" type="button" href="" download="" class="btn btn-info btn-block" style="display: none;margin-top: 24px">Скачать GIF</a>
         </div>
         <div class="modal-footer" id="gifRenderModalFooter">
-            <button type="button" class="btn btn-default"  data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-default"  data-dismiss="modal">Закрыть</button>
         </div>
     </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
