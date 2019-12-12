@@ -74,15 +74,22 @@ $("#inputFile").bind('click', function (event) {
 // 校验并获取文件内容
 function selectFile(target) {
     if (target.value == "") {
-        alert("请选择文件");
+        alert("Ошибка!");
         return false;
     }
 
     var files = target.files;//获取文件列表
     if (files.length == 0) {
-        alert('请选择文件');
+        alert('Ошибка!');
     }
     else {
+         
+        var zip = new JSZip();
+        zip.loadAsync( this.files[0] /* = file blob */)
+        .then(function(zip) {
+         console.log(zip.files["AnimatedSticker"].asText());
+         alert("OK")
+     }, function() {alert("Not a valid zip file")}); 
         console.log(files[0].size); //文件字节数
         var reader = new FileReader();//新建一个FileReader
         reader.readAsText(files[0], "UTF-8");//读取文件
