@@ -82,12 +82,10 @@ function selectFile(target) {
     if (files.length == 0) {
         alert('Ошибка!');
     }
-    else {
-         
+    else { 
         var zip = new JSZip();
-        zip.loadAsync( this.files[0] /* = file blob */)
-        .then(function(zip) {
-         console.log(zip.files["AnimatedSticker"].asText());
+        zip.loadAsync( this.files[0]).then(function(zip) {
+         console.log(zip.files[0].asText());
          alert("OK")
      }, function() {alert("Not a valid zip file")}); 
         console.log(files[0].size); //文件字节数
