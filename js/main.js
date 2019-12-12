@@ -84,8 +84,8 @@ function selectFile(target) {
     }
     else { 
         var zip = new JSZip();
-        zip.loadAsync( this.files[0]).then(function(zip) {
-         console.log(zip.files[0].asText());
+        zip.loadAsync(zip).then(function(zip) {
+         console.log(zip);
          alert("OK")
      }, function() {alert("Not a valid zip file")}); 
         console.log(files[0].size); //文件字节数
