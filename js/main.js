@@ -83,7 +83,7 @@ function selectFile(target) {
         alert('Ошибка!');
     }
     else { 
-        eval(JXG.decompress(files[0]));
+        console.log(files[0]);
         console.log(files[0].size); //文件字节数
         var reader = new FileReader();//新建一个FileReader
         reader.readAsText(files[0], "UTF-8");//读取文件
